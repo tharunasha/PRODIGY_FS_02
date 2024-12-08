@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('./assets/im1.jpg');
+            background-size: cover;
+            font-family: Arial, sans-serif; /* Adding a font for better appearance */
+        }
+
+        .box {
+            position: relative; /* Make this position relative for absolute positioning of the pseudo-element */
+            border-radius: 10px; /* Optional: rounded corners */
+            overflow: hidden; /* Hide overflow for rounded corners */
+            padding: 40px; /* Internal padding */
+            margin: 70px auto; /* Centering the box */
+            width: 600px; /* Fixed width */
+            background-color: rgba(255, 255, 255, 0.3); /* Light background for a translucent effect */
+        }
+
+        .box::before {
+            content: '';
+            position: absolute; /* Position it absolutely within the box */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+            backdrop-filter: blur(5px); /* Apply blur effect */
+            z-index: 0; /* Behind the content */
+        }
+
+        .box a {
+            display: inline-block; /* Make links block elements */
+            border: 1px solid black; /* Link border */
+            height: 30px; /* Height of links */
+            margin: 10px; /* Space between links */
+            margin-left: 225px;
+            text-decoration: none; /* Remove underline */
+            border-radius: 10px; /* Rounded corners for links */
+            padding: 12px 10px; /* Padding for links */
+            color: white; /* Text color */
+            background-color: #28a745; /* Background color for links */
+            position: relative; /* Make links above the blur */
+            z-index: 1; /* Above the blurred background */
+        }
+        a{
+            margin-left: 100px;
+        }
+        .box a:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Employee Management System</h1></center>
+
+    <div class="box">
+        <a href="create.html">Create Employee</a><br>
+        <a href="read.html">View Employees</a><br>
+        <a href="update.html">Update Employee</a><br>
+        <a href="delete.html">Delete Employee</a><br>
+    </div>
+
+</body>
+</html>
